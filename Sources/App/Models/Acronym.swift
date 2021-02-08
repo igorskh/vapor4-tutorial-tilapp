@@ -11,12 +11,17 @@ import Fluent
 final class Acronym: Model {
     static let schema = ACRONYMS
     
-    @ID var id: UUID?
+    @ID
+    var id: UUID?
+    
     @Parent(key: "userID")
     var user: User
     
-    @Field(key: "short") var short: String
-    @Field(key: "long") var long: String
+    @Field(key: "short")
+    var short: String
+    
+    @Field(key: "long")
+    var long: String
     
     init() {}
     
